@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     events((_, message) => setMessage(message));
     request();
-  });
+  }, [message]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setMessage(event.target.value);
